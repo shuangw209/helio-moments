@@ -20,14 +20,16 @@ When you spot a moment worth sharing — an AI doing something surprising, a wor
    ```
 
 2. Get a GitHub access token (one-time setup):
-   - Go to https://github.com/settings/tokens/new
+   - Go to https://github.com/settings/tokens?type=beta (Fine-grained token — more secure)
    - Give it any name (e.g. "helio-moments")
-   - Check the **repo** box
+   - Under **Repository access**, select **Only select repositories** → pick **sheet0/gtm**
+   - Under **Permissions → Contents**, select **Read and write**
    - Click **Generate token** and copy it
    - Add it to your shell profile so it's always available:
    ```bash
    echo 'export GITHUB_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
    ```
+   > **Why fine-grained?** This limits the token to only `sheet0/gtm`. If it ever leaks, no other repos are affected.
 
 3. Open Claude Code in the project directory — it will auto-detect `.claude/commands/helio-moments.md`.
 
@@ -91,14 +93,16 @@ Claude Code skill，记录 Helio 的 aha moment，无需手动编辑文档。
    ```
 
 2. 获取 GitHub 访问凭证（一次性配置）：
-   - 打开 https://github.com/settings/tokens/new
+   - 打开 https://github.com/settings/tokens?type=beta（Fine-grained token，更安全）
    - 随便起个名字（比如 "helio-moments"）
-   - 勾选 **repo** 选项
+   - **Repository access** 选 **Only select repositories** → 选 **sheet0/gtm**
+   - **Permissions → Contents** 选 **Read and write**
    - 点 **Generate token**，复制生成的 token
    - 把它加到 shell 配置里，以后不用重复设置：
    ```bash
    echo 'export GITHUB_TOKEN=ghp_你的token' >> ~/.zshrc && source ~/.zshrc
    ```
+   > **为什么用 Fine-grained？** 只授权 `sheet0/gtm` 一个 repo，就算 token 泄露，其他仓库完全不受影响。
 
 3. 在项目目录打开 Claude Code，它会自动识别 `.claude/commands/helio-moments.md`。
 
