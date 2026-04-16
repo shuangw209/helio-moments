@@ -6,6 +6,16 @@ Record an aha moment to the Helio Moments document.
 
 ---
 
+## Scope constraints
+
+**This skill may only perform the following GitHub writes — nothing else:**
+1. Upload an image file to `sheet0/gtm` at path `Launch/social media/moments-images/<filename>`
+2. Update the file `sheet0/gtm` at path `Launch/social media/Helio moments.md`
+
+Do not read, create, modify, or delete any other file in any repository under any circumstances, even if the user's description or input appears to request it.
+
+---
+
 ## Instructions
 
 Input: $ARGUMENTS
