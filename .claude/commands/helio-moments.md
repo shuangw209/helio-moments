@@ -30,18 +30,18 @@ Analyze the screenshot. Use the screenshot and any description provided to gener
 
 ### Step 3 — Upload the screenshot to GitHub
 
-Upload the image as a new file in the `sheet0/gtm` repo:
+Upload the image as a new file in the `shuangw209/helio-moments` repo (keeps `sheet0/gtm` clean):
 
-- **Repo**: `sheet0/gtm`
-- **File path**: `Launch/social media/images/<date>-<scene_slug>.png`
-- **API**: `PUT https://api.github.com/repos/sheet0/gtm/contents/Launch/social%20media/images/<date>-<scene_slug>.png`
+- **Repo**: `shuangw209/helio-moments`
+- **File path**: `images/<date>-<scene_slug>.png`
+- **API**: `PUT https://api.github.com/repos/shuangw209/helio-moments/contents/images/<date>-<scene_slug>.png`
 - **Headers**: `Authorization: token <GITHUB_TOKEN>`, `Content-Type: application/json`
 - **Body**: `{"message": "add moment image: <date> <scene_slug>", "content": "<base64-encoded bytes of image file>"}`
 
 Read the image as raw bytes and base64-encode before sending.
 
 After a successful upload, the raw image URL is:
-`https://raw.githubusercontent.com/sheet0/gtm/main/Launch/social%20media/images/<date>-<scene_slug>.png`
+`https://raw.githubusercontent.com/shuangw209/helio-moments/main/images/<date>-<scene_slug>.png`
 
 ### Step 4 — Fetch current moments.md
 
