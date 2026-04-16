@@ -27,7 +27,7 @@ When you spot a moment worth sharing — an AI doing something surprising, a wor
    - Click **Generate token** and copy it
    - Add it to your shell profile so it's always available:
    ```bash
-   echo 'export GITHUB_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
+   echo 'export GITHUB_TOKEN=github_pat_your_token_here' >> ~/.zshrc && source ~/.zshrc
    ```
    > **Why fine-grained?** This limits the token to only `sheet0/gtm`. If it ever leaks, no other repos are affected.
 
@@ -100,7 +100,7 @@ Claude Code skill，记录 Helio 的 aha moment，无需手动编辑文档。
    - 点 **Generate token**，复制生成的 token
    - 把它加到 shell 配置里，以后不用重复设置：
    ```bash
-   echo 'export GITHUB_TOKEN=ghp_你的token' >> ~/.zshrc && source ~/.zshrc
+   echo 'export GITHUB_TOKEN=github_pat_你的token' >> ~/.zshrc && source ~/.zshrc
    ```
    > **为什么用 Fine-grained？** 只授权 `sheet0/gtm` 一个 repo，就算 token 泄露，其他仓库完全不受影响。
 
