@@ -1,6 +1,6 @@
 # helio-moments
 
-[English](#english) | [中文](#中文)
+[English](#english) · [中文](#中文)
 
 ---
 
@@ -38,7 +38,7 @@ In Claude Code:
 
 ```
 /helio-moments ~/Desktop/screenshot.png
-/helio-moments ~/Desktop/screenshot.png AI sorted out the split without being told
+/helio-moments ~/Desktop/screenshot.png AI self-organized without instructions
 /helio-moments /tmp/capture.png The AI fixed the bug while I was sleeping
 ```
 
@@ -51,16 +51,14 @@ The skill will:
 
 ### Output format
 
-Each recorded moment looks like this:
-
 ```
 ---
 
-**2026-04-16 · AI 自发分工**
+**2026-04-16 · AI self-organized**
 
-**发现了什么：** 两个 AI 没人指挥就商量好谁做什么，像真实团队一样互相补位。
+**发现了什么：** Two AIs divided the work without anyone telling them to.
 
-**为什么分享：** 第一次感觉这个团队真的不一样了。
+**为什么分享：** First time the team felt truly different.
 
 [screenshot]
 ```
@@ -74,27 +72,27 @@ All entries are stored in:
 
 ## 中文
 
-用于记录使用 Helio 时灵光一现时刻的 Claude Code skill，无需手动编辑文档。
+Claude Code skill，记录 Helio 的 aha moment，无需手动编辑文档。
 
-### 功能介绍
+### 功能说明
 
-当你遇到值得分享的瞬间——AI 做了出乎意料的事、某个工作流突然顺了、或者那种"等等，这个团队真的不一样了"的感觉——跑一下这个 skill，剩下的它来处理：自动生成描述、上传截图、提交到 Helio Moments 文档。
+当你看到一个值得分享的瞬间——AI 做了让你意外的事、某个协作流程突然顺了、或者那种"等等，这个团队真的不一样了"的感觉——跑一下这个 skill，剩下的交给它：自动生成描述、上传截图、提交到 Helio Moments 文档。
 
 ### 安装
 
-1. Clone 这个 repo（或加入你的 Claude Code 项目）：
+1. Clone 这个仓库（或加入你的 Claude Code 项目）：
    ```bash
    git clone https://github.com/shuangw209/helio-moments.git
    ```
 
-2. 设置 GitHub Token（需要 `sheet0/gtm` 仓库的 `repo` 权限）：
+2. 设置 GitHub token（需要对 `sheet0/gtm` 有 `repo` 权限）：
    ```bash
    export GITHUB_TOKEN=ghp_...
    ```
 
-3. 在项目目录里打开 Claude Code——会自动识别 `.claude/commands/helio-moments.md`。
+3. 在项目目录打开 Claude Code，它会自动识别 `.claude/commands/helio-moments.md`。
 
-### 使用方法
+### 用法
 
 在 Claude Code 里输入：
 
@@ -107,19 +105,17 @@ All entries are stored in:
 ```
 /helio-moments ~/Desktop/screenshot.png
 /helio-moments ~/Desktop/screenshot.png AI 自己商量好分工，没人指挥
-/helio-moments /tmp/capture.png 睡觉的时候 AI 把 bug 修完了
+/helio-moments /tmp/capture.png 我睡觉的时候 AI 把 bug 修好了
 ```
 
 skill 会自动：
 1. 分析截图内容
-2. 生成 moment 条目（日期、场景、发现了什么、为什么值得分享）
-3. 把图片上传到 `sheet0/gtm`
+2. 生成 moment 条目（日期、场景、发现了什么、为什么分享）
+3. 上传图片到 `sheet0/gtm`
 4. 追加条目到 [Helio moments.md](https://github.com/sheet0/gtm/blob/main/Launch/social%20media/Helio%20moments.md)
 5. commit 并返回链接
 
 ### 输出格式
-
-每条记录格式如下：
 
 ```
 ---
@@ -133,7 +129,7 @@ skill 会自动：
 [截图]
 ```
 
-### 记录存放位置
+### Moments 存放位置
 
-所有 moments 写入：
+所有条目保存在：
 [`sheet0/gtm / Launch / social media / Helio moments.md`](https://github.com/sheet0/gtm/blob/main/Launch/social%20media/Helio%20moments.md)
