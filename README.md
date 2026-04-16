@@ -14,14 +14,19 @@ When you spot a moment worth sharing — an AI doing something surprising, a wor
 
 ### Setup
 
-1. Clone this repo (or add it to your Claude Code project):
+1. Clone this repo:
    ```bash
    git clone https://github.com/shuangw209/helio-moments.git
    ```
 
-2. Set your GitHub token (needs `repo` scope on `sheet0/gtm`):
+2. Get a GitHub access token (one-time setup):
+   - Go to https://github.com/settings/tokens/new
+   - Give it any name (e.g. "helio-moments")
+   - Check the **repo** box
+   - Click **Generate token** and copy it
+   - Add it to your shell profile so it's always available:
    ```bash
-   export GITHUB_TOKEN=ghp_...
+   echo 'export GITHUB_TOKEN=ghp_your_token_here' >> ~/.zshrc && source ~/.zshrc
    ```
 
 3. Open Claude Code in the project directory — it will auto-detect `.claude/commands/helio-moments.md`.
@@ -80,14 +85,19 @@ Claude Code skill，记录 Helio 的 aha moment，无需手动编辑文档。
 
 ### 安装
 
-1. Clone 这个仓库（或加入你的 Claude Code 项目）：
+1. Clone 这个仓库：
    ```bash
    git clone https://github.com/shuangw209/helio-moments.git
    ```
 
-2. 设置 GitHub token（需要对 `sheet0/gtm` 有 `repo` 权限）：
+2. 获取 GitHub 访问凭证（一次性配置）：
+   - 打开 https://github.com/settings/tokens/new
+   - 随便起个名字（比如 "helio-moments"）
+   - 勾选 **repo** 选项
+   - 点 **Generate token**，复制生成的 token
+   - 把它加到 shell 配置里，以后不用重复设置：
    ```bash
-   export GITHUB_TOKEN=ghp_...
+   echo 'export GITHUB_TOKEN=ghp_你的token' >> ~/.zshrc && source ~/.zshrc
    ```
 
 3. 在项目目录打开 Claude Code，它会自动识别 `.claude/commands/helio-moments.md`。
